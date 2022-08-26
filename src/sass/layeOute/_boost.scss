@@ -1,0 +1,19 @@
+//import utils filed
+@use '../utls';
+
+@use '../var' as *;
+
+.boost {
+    text-align: center;
+    padding: 50px 0;
+    background-color: $Dark-Violet;
+    color: white;
+    h2 {
+        margin-bottom: 50px;
+        color: white;
+    }
+}
+
+@media (min-width:800px) {
+  
+}

@@ -1,0 +1,140 @@
+//import utils filed
+@use '../utls';
+
+@use '../var' as *;
+
+.serves {
+    background-color: $Grayish-Violet;
+    text-align: center;
+    position: relative;
+    .input-container{
+        @extend %contianer;
+    }
+    .abs-input {
+        
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 200px;
+        width: 100%;
+        top: 0px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: $Dark-Violet;
+        border-radius: 5px;
+        input {
+           padding: 15px;
+           width: 90%;
+           margin-bottom: 15px;
+        }
+         
+    }
+    
+    .box {
+        @extend %contianer;
+        
+    }
+
+    .text {
+        @extend %contianer;
+        h2 {
+            @extend %m-auto;
+            margin-bottom: 15px;
+            width: 50%
+        }
+    
+        .prge {
+            @extend %m-auto;
+            width: 80%;
+        }
+    }
+    
+
+    & .cart {
+        @extend %m-auto;
+        background-color:$Gray;
+        width: 300px;
+        border-radius: 10px;
+        margin-top: 80px;
+        padding: 10px 20px;
+        position: relative;
+
+        .imag {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            left: 40px;
+            top: -40px;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color:$Dark-Violet;
+        }
+
+        h3 {
+            margin-top: 60px;
+            margin-bottom: 25px;
+        }
+        
+    }
+}
+
+
+@media (min-width:800px) {
+    .serves {
+        text-align: center;
+        .text {
+            h2 {
+                width: 100%;
+            }
+            .prge{
+                width: 50%;
+
+                
+            }
+        }        
+    }
+    .box {
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 100px;
+        .cart {
+            height: 250px;
+            p {
+                width: 100%;
+                font-size: 14px;
+                
+            }
+        }
+        .one {
+            margin-top: 0;
+        }
+        .tow {
+            margin-top: 40px;
+        }
+        .thire {
+            margin-top: 80px;
+        }
+    }
+
+    input {
+        padding:15px;
+        outline: none;
+        width: 60%;
+        margin-right: 30px;
+        border: none;
+        border-radius: 10px;
+        display: inline;
+    }
+    
+
+}
+
+p {
+    color: #777
+}

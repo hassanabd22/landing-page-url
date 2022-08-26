@@ -1,0 +1,67 @@
+//import utils filed
+@use '../utls';
+@use '../var' as *;
+
+footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+    background-color: $Very-Dark-Violet;
+    .container {
+        @extend %contianer;
+        & > div{
+            margin-bottom: 30px;
+            .icon img {
+                margin-left: 10px;
+            }
+            .logo {
+                margin-bottom: 50px;
+            }
+            ul {
+                margin-top: 30px;
+            }
+            li {
+                margin-top: 10px;
+                color: $Light-Grayish-Blue;
+            } 
+        } 
+        .icon img {
+            margin-left: 15px;
+        }
+    } 
+    p {
+        margin-top: 50px;
+        color: $Grayish-Blue;
+    }
+
+}
+
+@media (min-width:800px) {
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        & .link {
+            display: flex;
+            text-align: left;
+            ul {
+                margin-left: 100px;
+                margin-top: 0;
+                li {
+                    margin-top: 0;
+                    margin-bottom: 15px;
+                    color: $Gray;
+                    
+                }
+                .active {
+                    color: #fff;
+                    padding-bottom: 15px;
+                }
+            }
+
+        }
+        .btn-text {
+            text-align: right;
+        }
+    }
+}

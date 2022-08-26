@@ -1,0 +1,122 @@
+//import utils filed
+@use '../utls';
+@use '../var' as *;
+
+
+// mobile
+nav {
+    z-index: 50;
+    width:100% ;
+    background-color: #fff;
+    height: 96px;
+    @extend %center;
+    position: fixed;
+    .contianer {
+        @extend %contianer;
+        @extend %row;
+        justify-content: center;
+        flex-wrap: wrap;
+        height: 96px;
+        .head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80vw;
+            height: 96px;
+            .logo {
+                width: 121px;
+                height: 33px;
+            }
+        }
+        .links {
+            margin-top:0;
+            width: 80vw;
+            display: none;
+            height: 280px;
+            background-color: $Dark-Blue;
+            text-align: center;
+            color: white;
+            border-radius: 5px;
+            ul {
+                margin: 25px 0;
+                li {
+                    margin-bottom: 25px;
+                    transition: 0.3s;
+                    &:hover {
+                        color: $Very-Dark-Violet;
+                    }
+                }
+            }
+        }
+
+        .show {
+            display: block;
+        }
+        .log-sign {
+            @extend %m-auto;
+            width: 80%;
+            border-top: 1px solid #ddd;
+            a {
+                padding: 10px 0;
+                display: block;
+                
+                
+            }
+        }
+
+    }
+}
+
+
+// desktop navbar
+@media (min-width:800px) {
+    nav {
+        .contianer {
+            justify-content: space-between;
+            .head {
+                justify-content: space-between;
+                width: 12%;
+                .togle {
+                    display: none;
+                }
+            }
+            .links {
+                margin-top:0;
+                margin-left: 300px;
+                width: 60%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height: 100%;
+                background-color: #fff;
+                color: #111;
+                ul {
+                    margin: 0;
+                    margin-left:-200px;
+                    display: flex;
+                    align-items: center;
+                    height: 96px;
+                    li {
+                        margin-right: 15px;
+                        margin-bottom: 0;
+                    }
+                }
+                .log-sign {
+                    width: 230px;
+                    border-top: none;
+                    margin-left: 0;
+                    margin-right: 0;
+
+                    a {
+                        display: inline;
+                        padding: 8px 20px;
+                    }
+                }
+                .login {
+                    margin-right: 25px;
+                }
+            }
+        }
+    }
+
+}
